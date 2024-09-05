@@ -1,20 +1,29 @@
-# MyTheresa Promotions API
+# Products Promotions API
 
-Esta API permite obtener una lista de productos de la tienda MyTheresa, filtrados por categoría y con descuentos aplicados a ciertos productos.
+This API allows you to get a list of products from the MyTheresa store, filtered by category and with discounts applied to certain products.
 
-## Requisitos
+## Requirements
 
 - Docker
 - Docker Compose
 
-## Instalación y Ejecución
+## Installation and Execution
 
-1. Clona el repositorio y accede al directorio del proyecto:
+1. Clone the repository and navigate to the project directory:
 
    ```bash
-   git clone https://github.com/tuusuario/mi-repositorio.git
-   cd mi-repositorio
+   git clone https://github.com/woker21/BackLaravelTestCap
+   cd BackLaravelTestCap
 
+2. Build and launch containers with Docker:
 
+   ```bash
+   docker run -d -p 8000:80 restapi_php-app
+3. The API will be available at:
+   ```bash
+   http://localhost:8000/api/products
 
-docker run -d -p 8000:80 restapi_php-app
+You can filter products by category or by price using the category and priceLessThan parameters. For example:
+
+   ```bash
+   http://localhost:8000/api/products?category=boots&priceLessThan=10000
